@@ -14,3 +14,20 @@ let containsDuplicates = s => {
   }
   return false;
 };
+
+
+let revWords = (str) => {
+  var words = str.split(" ");
+  var temp;
+  for (var i = 0; i < words.length; i++){
+    temp = " ";
+    for (var j = words [i].length - 1; j >= 0; j--){
+      temp += words [i][j];
+    }
+    words[i] = temp;
+  }
+  return words.join(" ");
+};
+
+//revWords ("Web App Dev"); // expect "beW ppA veD" 
+//revWords ("Delta Echo"); // expect "atleD ohcE" 
